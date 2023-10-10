@@ -1,0 +1,19 @@
+<%- include('partials/header.ejs'); %>
+    <h1>
+        <%= new Date(); %></h1>
+
+        <% if(isActive){ %>
+            <h1>The user is active</h1>
+        <%} else{   %>
+            <h1>The user is inactive</h1>
+        <% } %>
+
+        <ul>
+
+            <% for(i=0;i<users.length;i++){ %>
+                <li><%=users[i].name %></li>
+            <% } %>
+
+        </ul>
+
+<%- include('partials/footer.ejs'); %>

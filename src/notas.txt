@@ -1,0 +1,58 @@
+Protocolo HTTP:
+    Este protocolo nos permite poder comunicar cliente y servidor que basicamente serian dos computa-
+    dores que podrian estar en diferentes partes del mundo.
+
+    HTTP Methods(llamados también "HTTP VERBS"):
+    Request Get: Cuando el cliente busca una url especifica para que se le devuelva un contenido 
+    especifico.
+
+    Request Post: El cliente va a estar enviandole datos al servidor y este último tendra que hacer
+    algo con eso.
+
+    Request Put: Significa que el cliente esta intentando actualizar algo dentro del servidor.
+
+    Request Delete: Es cuando el cliente esta intentando eliminar algo dentro del servidor.
+
+    Request Patch: Es similar al verbo "Put" ya que también actualiza algo.
+
+    Diferencia entre Patch y Put: Si yo envio una peticion Put significa que quiero actualizar
+    todos los datos(Por ejemplo nombre, apellido, edad, etc) pero, en cambio si uso Patch es para 
+    solamente cambiar una parte de esos datos(tal vez solo el nombre o solo la edad como ejemplos).
+
+    HAY MAS METODOS QUE ESTOS PERO ESTOS SON LOS MAS USADOS EN APLICACIONES WEB AL USAR EXPRESS.
+
+Clientes Res: Client Thunder(Simula enviar cosas por los http verbs sin tener que programar mucho)
+
+Algunos numeros de respuestas del servidor: 
+200:Todo fue bien
+204:Todo fue bien pero no te voy a devolver nada.
+404:No se encontro
+500:Error interno del servidor
+
+
+Memoria cache: La memoria cache es una memoria que tienen los buscadores para evitar procesar
+respuestas que ya habian sido generados antes(no hace mucho) para evitar tener que procesar 
+las mismas respuestas cada rato.
+
+Request: Cuando nosotros recibimos desde un formulario de js u otro lugar informacion desde un 
+request estamos recibiendo un documento que tiene unas especie de cabeceras para saber que tipo 
+de informacion es(conocido como header lo cual es una nota que describe la información), la cual ademas tiene un contenido(Llamado body). Además incluye un titulo que 
+podria ser la url en la que se mostrara o de donde viene, a este titulo se lo llama endpoint.
+
+¿Que es un endpoint?
+ Con endpoint nos referimos a la ruta final para llegar a un recurso como, por ejemplo obtener
+productos de un servidor. Como ejemplo pensemos que un cliente realiza una peticion http a nuestro
+servidor, en este caso es una peticion get para el endpoint de productos(http:/flashy/productos).
+ Nuestro servidorprocesa esta petición bajo el mismo endpoint que fue enviado y responde con la
+informacion solicitada por el cliente en su interfaz, de esta forma y en este caso el cliente.
+
+Metodo all de express.
+
+app.all("/user",(req, res)=>{
+    res.send("Enviando user");
+}) /* Este metodo all sirve para decir que esta url sirve con todos los metodos http(get, post,
+put, delete, patch, etc.) */
+
+
+Api:(Aplication programming interface) Es un intermediario entre una aplicación con otra aplicación
+que sirve para conectar estas dos.

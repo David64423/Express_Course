@@ -1,0 +1,16 @@
+<%- include('partials/header.ejs'); %>
+    <h1>Users</h1>
+
+    <div>
+        <% users.map((user)=>{  %>
+            <br><br><br><br><br>
+            <ul>
+                <li><%= user.firstname %></li>
+                <li><%= user.lastname %></li>
+                <li><%= user.email %></li>
+            </ul>
+            <% }) %>
+    </div>
+
+
+<%- include('partials/footer.ejs'); %>
