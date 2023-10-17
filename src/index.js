@@ -3,6 +3,7 @@ const path = require("path");
 const morgan= require("morgan");
 const HomeRoutes= require("./routes/home");
 const UserRoutes= require("./routes/users");
+const connectDB= require('./db');
 require("ejs");
 
 //import {newFunction} from "./";
@@ -24,7 +25,7 @@ app.use(UserRoutes);
 
 
 
-
+connectDB();
 
 //app.use(express.static("./static"))
 
